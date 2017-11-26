@@ -1,0 +1,28 @@
+{
+  "name": "brayn003.github.io",
+  "version": "0.0.1",
+  "description": "A protfolio site for Rudraprasad Das",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brayn003/brayn003.github.io.git"
+  },
+  "keywords": [
+    "frontend",
+    "js",
+    "javascript",
+    "react",
+    "developer",
+    "protfolio",
+    "angular",
+    "brayn003"
+  ],
+  "author": "brayn003@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brayn003/brayn003.github.io/issues"
+  },
+  "homepage": "https://brayn003.github.io"
+}
