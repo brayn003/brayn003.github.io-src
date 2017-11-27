@@ -1,0 +1,39 @@
+.sidebar{
+  background-color: #333;
+  height: 100%;
+  width: 500px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  ul{
+    margin: 0px;
+    display: block;
+    position: absolute;
+    padding: 0px;
+    width: 100%;
+    transition: top 300ms;
+
+    li{
+      padding-left: 40px;
+      list-style: none;
+      font-size: 48px;
+      letter-spacing: 10px;
+      font-family: 'monument-valley';
+      height: 80px;
+      line-height: 80px;
+
+      a{
+        cursor: pointer;
+        text-decoration: none;
+        color: #FFF;
+      }
+
+      &.active{
+        font-size: 86px;
+        height: 100px;
+        line-height: 100px;
+      }
+    }
+  }
+}
