@@ -40,6 +40,9 @@ module.exports = {
       options: {
         name: "[name].[ext]",
       },
+    },{
+      test: /\.mp3$/,
+      loader: "file-loader",
     }],  
   },
   resolve: {
