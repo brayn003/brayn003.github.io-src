@@ -10,5 +10,8 @@
     font-size: 184px;
     font-family: 'marck-script';
     color: #FFFFFF;
+    @media (max-width: 1500px) {
+      font-size: 164px;
+    }
   }
 }

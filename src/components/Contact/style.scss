@@ -6,7 +6,9 @@
   align-items: center;
 
   .contact-container{
-    width: 750px;
+    @media (max-width: 1500px) {
+      width: 570px;
+    }
   }
 
   .contact-container-third{
@@ -18,13 +20,19 @@
 
     img{
       height: 150px;
+      @media (max-width: 1500px) {
+        height: 120px;
+      }
     }
   }
 
   .contact-text {
     color: #FFFFFF;
-    font-size: 32px;
     font-family: 'Dosis';
+    font-size: 32px;
+    @media (max-width: 1500px) {
+        font-size: 22px;
+    }
 
     a{
       text-decoration: none;
@@ -33,3 +41,4 @@
     }
   }
 }
+

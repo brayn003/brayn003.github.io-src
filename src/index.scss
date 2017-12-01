@@ -9,3 +9,9 @@ html, body, #app{
   margin: 0px;
   overflow: hidden;
 }
+
+@mixin md-screen{
+  @media (max-width: 1500px) {
+    @content;
+  }
+}

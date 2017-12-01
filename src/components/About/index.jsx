@@ -12,12 +12,12 @@ export default function About(){
           <div style={{ backgroundImage : 'url(' + profileImage + ')'}} className="about-image animate-profile-pic" />
         </div>
         <div className="about-container-divider">
-          <div className="about-details animate-about-details">
+          <div className="about-details">
             Hey there, my name is <b>Rudra</b>. I am a UX/UI developer based in Mumbai, India. 
             Currently working as a Frontend Developer with Zaya Learning Labs to build kickass educational products for kids.
           </div>
 
-          <div className="about-badges animate-about-badges">
+          <div className="about-badges">
             <span className="badges">ui</span>
             <span className="badges">ux</span>
             <span className="badges">design</span>

@@ -19,6 +19,9 @@
       height: 80px;
       line-height: 80px;
       text-transform: uppercase;
+      @media (max-width: 1500px) {
+        font-size: 36px;
+      }
 
       a{
         cursor: pointer;
@@ -30,6 +33,9 @@
         font-size: 86px;
         height: 100px;
         line-height: 100px;
+        @media (max-width: 1500px) {
+          font-size: 64px;
+        }
       }
     }
   }
