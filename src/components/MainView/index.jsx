@@ -27,7 +27,7 @@ class MainView extends Component{
 
   initalizeClasses(menuItems){
     return menuItems.reduce((acc, item) => { 
-      acc[item] = '';
+      acc[item] = 'view-container';
       return acc;
     }, {});
   }
@@ -37,29 +37,9 @@ class MainView extends Component{
   }
 
   componentWillReceiveProps(nextProps){
-    console.log('update2')
-
     this.setView(nextProps.menu.active);
     this.activeItem = nextProps.menu.active;
   }
-
-  // setClassesAndStyles(classes, styles){
-  //   // console.log('here')
-  //   // let styles = JSON.parse(JSON.stringify(this.state.styles));
-  //   // let styles = this.initalizeStyles();
-  //   // styles[item].animationDelay = delay + 'ms';
-  //   this.setState({
-  //     classes: classes,
-  //     styles: styles
-  //   });
-  // }
-
-  // setClasses(classes){
-  //   // let classes = this.initalizeClasses();
-  //   // let classes = JSON.parse(JSON.stringify(this.state.classes));
-  //   // classes[item] = className;
-  //   this.setState({ classes: classes });
-  // }
 
   getViewForItem(menuItem){
     let view;
@@ -86,31 +66,37 @@ class MainView extends Component{
   }
 
   setView(newActiveItem){
-    console.log('update')
     let menuItems = this.props.menu.items;
     let activeIndex = menuItems.indexOf(this.activeItem);
     let newActiveIndex = menuItems.indexOf(newActiveItem); 
     let styles = this.initalizeStyles(menuItems);
     let classes = this.initalizeClasses(menuItems);
-    styles[menuItems[newActiveIndex]].visibility = 'visible';
-    styles[menuItems[activeIndex]].visibility = 'visible';
+    if (activeIndex != newActiveIndex) {
+      styles[menuItems[newActiveIndex]].visibility = 'visible';
+      styles[menuItems[activeIndex]].visibility = 'hidden';
+    } else {
+      styles[menuItems[activeIndex]].visibility = 'visible';
+    }
+
     if (activeIndex < newActiveIndex) {
-      for( let i = activeIndex; i < newActiveIndex; i++ ){
-        console.log('update3');
-        classes[menuItems[i]] = 'zoom-out-leave';
-        styles[menuItems[i]] = { animationDelay: ((i - activeIndex) * 100)+'ms' };
-        // this.setClassForItem( menuItems[i], 'zoom-out-leave');
-        // this.setDelayForItem( menuItems[i], i*300 );
+      for( let i = activeIndex; i <= newActiveIndex; i++ ){
+        if (i != newActiveIndex) {
+          classes[menuItems[i]] = 'view-container zoom-out-leave';
+        } else {
+          classes[menuItems[i]] = 'view-container zoom-in-enter';
+        }
+        styles[menuItems[i]] = { animationDelay: ((i - activeIndex) * 100)+'ms', visibility: 'hidden' };
       }
     } else {
-      // styles[menuItems[newActiveIndex]].visibility = 'visible';
-      for( let i = activeIndex - 1; i > newActiveIndex - 1; i-- ){
-        console.log('update4', i, activeIndex - i)
-        classes[menuItems[i]] = 'zoom-in-enter';
+      for( let i = activeIndex; i > newActiveIndex - 1; i-- ){
+        if (i != newActiveIndex) {
+          classes[menuItems[i]] = 'view-container zoom-in-leave';
+        } else {
+          classes[menuItems[i]] = 'view-container zoom-out-enter';
+        }
         styles[menuItems[i]] = { animationDelay: ((activeIndex - i - 1) * 100)+'ms', visibility: 'hidden' };
       }
     }
-    console.log(styles);
     this.setState({
       classes: classes,
       styles: styles
@@ -120,19 +106,6 @@ class MainView extends Component{
   renderAllViews(){
     return this.props.menu.items.map(item => this.getViewForItem(item));
   }
-
-  // changeView(view) {
-  //   this.setState({ activeView: view });
-  // }
-
-  // renderView(newActiveIndex) {
-  //   let activeIndex = this.props.menu.items.indexOf(this.activeItem);
-  //   if (activeIndex == newActiveIndex) {
-  //     return this.getViewForItem(newActiveIndex);
-  //   }
-
-  //   return this.getViewForItem(newActiveIndex);
-  // }
 
   render(){
     return (

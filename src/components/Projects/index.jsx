@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
+import './style.scss';
+
 export default function Projects(){
   return(
-    <h1 style={{ backgroundColor: '#00f00f' }}>Projects</h1>
+    <div className="view-projects" />
   );
 }

@@ -14,15 +14,16 @@
       padding-left: 40px;
       list-style: none;
       font-size: 48px;
-      letter-spacing: 10px;
-      font-family: 'monument-valley';
+      letter-spacing: 7px;
+      font-family: 'ailerons';
       height: 80px;
       line-height: 80px;
+      text-transform: uppercase;
 
       a{
         cursor: pointer;
         text-decoration: none;
-        color: #FFF;
+        color: rgba(255, 255, 255, 0.6);
       }
 
       &.active{

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
+import './style.scss';
+
 export default function Home(){
   return (
-    <h1 style={{ margin: 0, backgroundColor: '#00ffff' }}>Home</h1>
+    <div className="view-home">
+      <p className="home-title">brayn003</p>  
+    </div>
   );
 }

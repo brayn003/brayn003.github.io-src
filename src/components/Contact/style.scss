@@ -1,0 +1,35 @@
+.view-contact{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contact-container{
+    width: 750px;
+  }
+
+  .contact-container-third{
+    display: inline-block;
+    width: calc(33.33% - 40px);
+    float: left;
+    padding: 20px;
+    text-align: left;
+
+    img{
+      height: 150px;
+    }
+  }
+
+  .contact-text {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-family: 'Dosis';
+
+    a{
+      text-decoration: none;
+      color: #FFFFFF;
+      border-bottom: 2px dashed #FFFFFF;
+    }
+  }
+}
