@@ -1,3 +1,17 @@
 .layout{
   height: 100%;
+  background-color: #333;
+  
+  .sidebar-container{
+    height: 100%;
+    width: 350px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .view-container{
+    width: calc(100% - 350px);
+    margin-left: auto;
+  }
 }
