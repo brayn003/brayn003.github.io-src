@@ -1,4 +1,46 @@
 .view-projects{
-  width: 100%;
+  width: calc(100% - 300px);
   height: 100%;
+  padding-left: 300px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+
+  .slick-initialized, .slick-list, .slick-track{
+    height: 100%;
+    width: 100%;
+  }
+
+  .slick-track{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .slick-slide{
+    height: auto;
+  }
+
+  .img-container{
+    min-height: 600px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  p{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Dosis';
+    font-size: 22px;
+  }
+
+  .slick-dots{
+    bottom: 25px;
+  }
 }

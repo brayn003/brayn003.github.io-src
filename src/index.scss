@@ -2,6 +2,9 @@
 @import './fonts/monument-valley/stylesheet.css';
 @import './fonts/marck-script/stylesheet.css';
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 html, body, #app{
   height: 100%;
   padding: 0px;
