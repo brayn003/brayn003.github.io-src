@@ -1,6 +1,6 @@
-- Remove 'there' from 'hey there'. Sounds derogatory.
-- Add tooltips or something on the arrow. It is not intutive.
-- Don't use ' drop me a line'. Sounds really bad. Use 'get intouch with me at'.
+done - Remove 'there' from 'hey there'. Sounds derogatory.
+done - Add tooltips or something on the arrow. It is not intutive.
+done - Don't use ' drop me a line'. Sounds really bad. Use 'get intouch with me at'.
 - Add writeups for each projects
 
 - Make the site responsive. For phone and for medium sized screens

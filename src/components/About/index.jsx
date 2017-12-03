@@ -13,7 +13,7 @@ export default function About(){
         </div>
         <div className="about-container-divider">
           <div className="about-details">
-            Hey there, my name is <b>Rudra</b>. I am a UX/UI developer based in Mumbai, India. 
+            Hey, my name is <b>Rudra</b>. I am a UX/UI developer based in Mumbai, India. 
             Currently working as a Frontend Developer with Zaya Learning Labs to build kickass educational products for kids.
           </div>
 

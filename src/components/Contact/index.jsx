@@ -10,7 +10,7 @@ export default function Contact(){
   return(
     <div className="view-contact">
       <div className="contact-container">
-        <p className="contact-text">Drop me a line at <a href="mailto:brayn003@gmail.com">brayn003@gmail.com</a>. Also find me here ...</p>
+        <p className="contact-text">Get in touch with me at <a href="mailto:brayn003@gmail.com">brayn003@gmail.com</a>. Also find me here ...</p>
         <div className="contact-container-third">
           <a target="_blank" href="https://www.facebook.com/Rdrockz"><img src={ facebookIcon } /></a>
         </div>
