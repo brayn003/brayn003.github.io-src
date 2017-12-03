@@ -1,46 +1,63 @@
 .view-projects{
-  width: calc(100% - 300px);
+  width: calc(100% - 500px);
   height: 100%;
-  padding-left: 300px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  padding-left: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .slider{
+    visibility: inherit !important;
+    
+    .slide-title{
+      font-weight: 600;
+      font-size: 28px;
+    }
 
-  .slick-initialized, .slick-list, .slick-track{
-    height: 100%;
-    width: 100%;
+    p{
+      color: #FFFFFF;
+      font-family: 'Dosis';
+      font-size: 22px;
+    }
   }
 
-  .slick-track{
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+
+  .slide-pagination{
+    color: #FFFFFF;
 
   }
 
-  .slick-slide{
-    height: auto;
+  .slider-clear-btn{
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+
+    &:focus{
+      outline: none;
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    .typcn {
+      color: #FFFFFF;
+      font-size: 22px;
+    }
+  }
+
+  .project-slider-container{
+    height: 80%;
+    width: 80%;
   }
 
   .img-container{
-    min-height: 600px;
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
-  
-  p{
-    text-align: center;
-    color: #FFFFFF;
-    font-family: 'Dosis';
-    font-size: 22px;
-  }
 
-  .slick-dots{
-    bottom: 25px;
-  }
 }
