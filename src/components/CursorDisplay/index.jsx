@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import './style.scss';
 
@@ -51,17 +52,22 @@ class CursorDisplay extends Component{
   render() {
     return(
       <div className="cursor-display">
-        <div className="key-row">
-          <div className="key"></div>
-          <div className={ this.state.up }><span className="typcn typcn-arrow-up" /></div>
-          <div className="key"></div>
-        </div>
-        <div className="key-row">
-          <div className={ this.state.left }><span className="typcn typcn-arrow-left" /></div>
-          <div className={ this.state.down }><span className="typcn typcn-arrow-down" /></div>
-          <div className={ this.state.right }><span className="typcn typcn-arrow-right" /></div>
-        </div>
-      </div> 
+        <a data-tip data-for='keyTooltip' >
+          <div className="key-row">
+            <div className="key"></div>
+            <div className={ this.state.up }><span className="typcn typcn-arrow-up" /></div>
+            <div className="key"></div>
+          </div>
+          <div className="key-row">
+            <div className={ this.state.left }><span className="typcn typcn-arrow-left" /></div>
+            <div className={ this.state.down }><span className="typcn typcn-arrow-down" /></div>
+            <div className={ this.state.right }><span className="typcn typcn-arrow-right" /></div>
+          </div>
+        </a>
+        <ReactTooltip id='keyTooltip' place="top" type="light" effect="float">
+          <p class="key-tooltip">The arrows indicate that<br />you can use keyboard keys<br />to navigate.</p>
+        </ReactTooltip> 
+      </div>
     );
   }
 }
