@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import { setActiveMenu } from '../../reducers/Menu';
 
-import './style.scss';
 import snapSoundPath from '../../sounds/snap.mp3';
 
 class Sidebar extends Component {

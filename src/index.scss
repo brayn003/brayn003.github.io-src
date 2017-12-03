@@ -4,16 +4,22 @@
 
 @import '~typicons.font/src/font/typicons.css';
 
-html, body, #app{
-  height: 100%;
-  padding: 0px;
-  border: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
+@import './theme/main';
 
-body{
-  font-family: 'Dosis';
-  color: #FFFFFF;
-  font-size: 22px;
-}
+@import './components/About/style';
+@import './components/Background/style';
+@import './components/Contact/style';
+@import './components/CursorDisplay/style';
+@import './components/Home/style';
+@import './components/Layout/style';
+@import './components/MainView/style';
+@import './components/Projects/style';
+@import './components/Sidebar/style';
+
+
+
+
+
+
+
+

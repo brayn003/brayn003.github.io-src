@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Granim from 'granim';
 import { connect } from 'react-redux';
 
-import './style.scss';
-
 class Background extends Component{
   constructor() {
     super();

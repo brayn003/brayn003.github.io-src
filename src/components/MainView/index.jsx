@@ -6,8 +6,6 @@ import About from '../About';
 import Projects from '../Projects';
 import Contact from '../Contact';
 
-import './style.scss';
-
 class MainView extends Component{
   constructor(props) {
     super();

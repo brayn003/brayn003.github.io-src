@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import './style.scss';
 import facebookIcon from '../../images/icon-facebook.png';
 import twitterIcon from '../../images/icon-twitter.png';
 import linkedinIcon from '../../images/icon-linkedin.png';

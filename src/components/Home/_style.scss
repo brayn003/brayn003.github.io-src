@@ -7,16 +7,28 @@
 
   .home-container{
     width: 40%;
-    
+    @include xs-screen{
+      width: 100%;
+    }
+
+
     .home-title{
       margin: 0px;
       font-size: 184px;
       font-family: 'marck-script';
       color: #FFFFFF;
       text-align: center;
-      @media (max-width: 1500px) {
+      @include md-screen {
         font-size: 164px;
       }
+      @include xs-screen {
+        font-size: 64px;
+      }
+    }
+
+    .home-tag-container{
+      width: 100%;
+      margin: 0px;
     }
 
     .home-tags{
@@ -26,9 +38,25 @@
       font-size: 32px;
       text-align: center;
 
+      @include xs-screen {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
       .typcn{
         font-size: 44px;
+        @include xs-screen {
+          font-size: 20px;
+        }
       }
+    }
+
+    .home-xs-message{
+      margin-top: 50px;
+      font-size: 16px;
+      text-align: center;
     }
   }
 

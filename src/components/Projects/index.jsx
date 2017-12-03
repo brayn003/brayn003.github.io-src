@@ -4,8 +4,6 @@ import keydown from 'react-keydown';
 
 import Carousel from 'nuka-carousel';
 
-import './style.scss';
-
 import imgEd from '../../images/project-ed.png';
 import imgAlphajuice from '../../images/project-alphajuice.png';
 import imgAt from '../../images/project-ajay.png';

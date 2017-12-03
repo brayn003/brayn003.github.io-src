@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import './style.scss';
-
 import profileImage from '../../images/rudra.jpg';
 
 export default function About(){

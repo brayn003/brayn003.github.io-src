@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
-import './style.scss';
-
 class CursorDisplay extends Component{
   constructor() {
     super();
@@ -51,7 +49,7 @@ class CursorDisplay extends Component{
 
   render() {
     return(
-      <div className="cursor-display">
+      <div className="cursor-display xs-hidden">
         <a data-tip data-for='keyTooltip' >
           <div className="key-row">
             <div className="key"></div>
