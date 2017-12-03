@@ -10,12 +10,12 @@ import './index.scss';
 import './fonts/ailerons/ailerons-typeface-webfont.ttf';
 import './fonts/ailerons/ailerons-typeface-webfont.woff';
 import './fonts/ailerons/ailerons-typeface-webfont.woff2';
-import './fonts/monument-valley/monument_valley_1.2-regular-webfont.ttf';
-import './fonts/monument-valley/monument_valley_1.2-regular-webfont.woff';
-import './fonts/monument-valley/monument_valley_1.2-regular-webfont.woff2';
 import './fonts/marck-script/marckscript-regular-webfont.ttf';
 import './fonts/marck-script/marckscript-regular-webfont.woff';
 import './fonts/marck-script/marckscript-regular-webfont.woff2';
+import './fonts/dosis/dosis-regular-webfont.ttf';
+import './fonts/dosis/dosis-regular-webfont.woff';
+import './fonts/dosis/dosis-regular-webfont.woff2';
 
 
 const store = createStore(allReducers);
