@@ -5,13 +5,31 @@
   align-items: center;
   justify-content: center;
 
-  .home-title{
-    margin: 0px;
-    font-size: 184px;
-    font-family: 'marck-script';
-    color: #FFFFFF;
-    @media (max-width: 1500px) {
-      font-size: 164px;
+  .home-container{
+    width: 40%;
+    
+    .home-title{
+      margin: 0px;
+      font-size: 184px;
+      font-family: 'marck-script';
+      color: #FFFFFF;
+      text-align: center;
+      @media (max-width: 1500px) {
+        font-size: 164px;
+      }
+    }
+
+    .home-tags{
+      width: 33.33%;
+      display: inline-block;
+      float: left;
+      font-size: 32px;
+      text-align: center;
+
+      .typcn{
+        font-size: 44px;
+      }
     }
   }
+
 }
