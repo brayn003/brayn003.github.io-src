@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Sidebar from '../Sidebar';
 import MainView from '../MainView';
 import Background from '../Background';
+import CursorDisplay from '../CursorDisplay';
 
 import './style.scss';
 
@@ -16,6 +17,9 @@ export default class Layout extends Component {
         <div className="main-view-container">
           <Background bgColor="#FF00FF" />
           <MainView />
+          <div className="bottom-right">
+            <CursorDisplay />
+          </div>
         </div>
       </div>
     );
