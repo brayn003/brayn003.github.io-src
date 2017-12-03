@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import keydown from 'react-keydown';
 
 import Carousel from 'nuka-carousel';
@@ -62,7 +63,7 @@ const decorators = [{
   }
 }];
 
-export default class Projects extends Component{
+class Projects extends Component{
   constructor() {
     super();
     this.decorators = decorators;
@@ -76,14 +77,18 @@ export default class Projects extends Component{
 
   @keydown('left')
   goToPrevSlide(){
-    this.playSnapSound();
-    this.refs.carousel.previousSlide();    
+    if (this.props.menu.active == 'projects') {
+      this.playSnapSound();
+      this.refs.carousel.previousSlide();    
+    }
   }
 
   @keydown('right')
   goToNextSlide(){
-    this.playSnapSound();
-    this.refs.carousel.nextSlide();    
+    if (this.props.menu.active == 'projects') {
+      this.playSnapSound();
+      this.refs.carousel.nextSlide();    
+    }
   }
 
 
@@ -130,3 +135,12 @@ export default class Projects extends Component{
     );
   }
 }
+
+
+function mapStateToProps(state) {
+  return {
+    menu: state.menu
+  }
+}
+
+export default connect(mapStateToProps)(Projects);

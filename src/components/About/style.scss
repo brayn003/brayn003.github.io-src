@@ -1,6 +1,7 @@
 .view-about{
-  width: 100%;
+  width: calc(100% - 400px);
   height: 100%;
+  padding-left: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
