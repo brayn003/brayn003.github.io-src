@@ -130,7 +130,7 @@ class Projects extends Component{
                   style={{ backgroundImage: 'url("'+ imgAt +'")', width: '100%', height: 0.4*window.innerHeight }} 
                 />
                 <p className="slide-title">Ajay Talwar Photography</p>
-                <p className="slide-caption">A really beautiful portfolio site for a Delhi based astro-photographer, Mr. Ajay Talwar. The photograps and videos are just breathtaking.
+                <p className="slide-caption">A really beautiful portfolio site for a Delhi based astro-photographer, Mr. Ajay Talwar. The photographs and videos are breathtaking.
                 <br /><br />One of my very first projects. It is made on Wordpress platform.
                 </p>
               </div>
