@@ -102,9 +102,12 @@ class Projects extends Component{
                       style={{ backgroundImage: 'url("'+ imgEd +'")', height: '100%' }} 
                     />
                   </div>
-                  <div style={{ width: '50%', float: 'left', display: 'inline-block' }}>
+                  <div style={{ width: '38%', float: 'left', display: 'inline-block' }}>
                     <p className="slide-title" >English Duniya</p>
-                    <p className="slide-caption" >English Learning app for kids</p>
+                    <p className="slide-caption" >Learning English was never so interesting. English Duniya blends learning with fun.
+                     The products core is the recommendation engine that recognizes a student's level and unlocks new lessons based on it. 
+                     <br /><br />The app is made on Cordova platform and uses Phaser for rendering the gaming elements. Rest of the app is made on Ionic framework. It is also showcased on the Ionic site.
+                     <br /><br />Currently, the app caters to almost 5000 kids.</p>
                   </div>
                 </div>
             </div>
@@ -114,8 +117,10 @@ class Projects extends Component{
                     className="img-container" 
                     style={{ backgroundImage: 'url("'+ imgAlphajuice +'")', width: '100%', height: 0.4*window.innerHeight }} 
                   />
-                  <p className="slide-title">Alpha Juice</p>
-                  <p className="slide-caption">Gamified vocabulary learning app</p>
+                  <p className="slide-title">AlphaJuice</p>
+                  <p className="slide-caption">Hackathon prototype, the app gamifies the whole experience of learning new words. And it is suitable for all age groups.
+                  <br /><br />It is made on Cordova platform and utilizes Phaser as it's framework. Almost all of the app is written purely in Javascript. And it was developed in a span of just two days.
+                  </p>
                 </div>
             </div>
             <div>
@@ -125,7 +130,9 @@ class Projects extends Component{
                   style={{ backgroundImage: 'url("'+ imgAt +'")', width: '100%', height: 0.4*window.innerHeight }} 
                 />
                 <p className="slide-title">Ajay Talwar Photography</p>
-                <p className="slide-caption">Portfolio site for delhi based astro photographer</p>
+                <p className="slide-caption">A really beautiful portfolio site for a Delhi based astro-photographer, Mr. Ajay Talwar. The photograps and videos are just breathtaking.
+                <br /><br />One of my very first projects. It is made on Wordpress platform.
+                </p>
               </div>
             </div>
           </Carousel>
