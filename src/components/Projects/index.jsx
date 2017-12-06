@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import keydown from 'react-keydown';
+import { withRouter } from 'react-router-dom';
 
 import Carousel from 'nuka-carousel';
 
@@ -95,7 +96,7 @@ class Projects extends Component{
       <div className="view-projects">
           <Carousel ref="carousel" decorators={ this.decorators }>
             <div>
-                <div style={{ height: 0.7*window.innerHeight }}>
+                <div style={{ height: 700 }}>
                   <div style={{ width: '50%', float: 'left', display: 'inline-block', height: '100%' }}>
                     <div 
                       className="img-container" 
@@ -115,7 +116,7 @@ class Projects extends Component{
                 <div style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto' }} >
                   <div 
                     className="img-container" 
-                    style={{ backgroundImage: 'url("'+ imgAlphajuice +'")', width: '100%', height: 0.4*window.innerHeight }} 
+                    style={{ backgroundImage: 'url("'+ imgAlphajuice +'")', width: '100%', height: 400 }} 
                   />
                   <p className="slide-title">AlphaJuice</p>
                   <p className="slide-caption">Hackathon prototype, the app gamifies the whole experience of learning new words. And it is suitable for all age groups.
@@ -127,7 +128,7 @@ class Projects extends Component{
               <div style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto' }} >
                 <div 
                   className="img-container" 
-                  style={{ backgroundImage: 'url("'+ imgAt +'")', width: '100%', height: 0.4*window.innerHeight }} 
+                  style={{ backgroundImage: 'url("'+ imgAt +'")', width: '100%', height: 400 }} 
                 />
                 <p className="slide-title">Ajay Talwar Photography</p>
                 <p className="slide-caption">A really beautiful portfolio site for a Delhi based astro-photographer, Mr. Ajay Talwar. The photographs and videos are breathtaking.
@@ -148,4 +149,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Projects);
+export default withRouter(connect(mapStateToProps)(Projects));

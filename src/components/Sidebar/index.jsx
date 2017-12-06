@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import keydown from 'react-keydown';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { setActiveMenu } from '../../reducers/Menu';
 
@@ -15,6 +17,12 @@ class Sidebar extends Component {
     this.activeItemHeight = 100;
     this.state = {
       menuTop: this.calculateTop(props.menu.active, props.menu.items)
+    }
+    this.routes = {
+      home: '/',
+      about: '/about',
+      projects: '/projects',
+      contact: 'contact'
     }
   }
 
@@ -34,12 +42,32 @@ class Sidebar extends Component {
     snapSound.play();
   }
 
+  initializeActiveMenu(path) {
+    for(let menuItem in this.routes) {
+      if(this.routes[menuItem] == path) {
+        this.props.setActiveMenu(menuItem);    
+        break;
+      }
+    }
+  }
+
+  componentWillMount() {
+    this.initializeActiveMenu(this.props.location.pathname);
+  }
+
+  logPageView() {
+    ReactGA.set({ page: window.location.pathname + window.location.search });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   changeMenuTo(item) {
     this.playSnapSound();
     this.props.setActiveMenu(item);    
     this.setState({
       menuTop: this.calculateTop(item)
-    })  
+    });
+    this.props.history.push(this.routes[item]);
+    this.logPageView();
   }
 
   renderMenuItems() {
@@ -89,4 +117,4 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Sidebar));
