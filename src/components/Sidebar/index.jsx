@@ -49,6 +49,7 @@ class Sidebar extends Component {
         break;
       }
     }
+    this.logPageView();
   }
 
   componentWillMount() {
