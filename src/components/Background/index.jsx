@@ -28,8 +28,8 @@ class Background extends Component{
         states: {
           home: {
             gradients: [
-              ['#AA076B', '#61045F'],
-              ['#02AAB0', '#00CDAC']
+              ['#185a9d', '#43cea2'],
+              ['#AA076B', '#61045F']
             ],
           },
           about: {
