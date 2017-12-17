@@ -57,8 +57,9 @@ class Sidebar extends Component {
   }
 
   logPageView() {
-    ReactGA.set({ page: window.location.pathname + window.location.search });
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    console.log({ page: window.location.pathname + window.location.hash.replace('#/','') });
+    ReactGA.set({ page: window.location.pathname + window.location.hash.replace('#/','') });
+    ReactGA.pageview(window.location.pathname + window.location.hash.replace('#/',''));
   }
 
   changeMenuTo(item) {

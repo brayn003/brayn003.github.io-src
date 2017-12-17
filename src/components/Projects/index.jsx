@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import ReactGA from 'react-ga';
 
 import { setActiveProject } from '../../reducers/Project';
 import ProjectModal from '../ProjectModal';
@@ -16,6 +17,7 @@ class Projects extends Component{
   }
 
   onClickProject(project) {
+    ReactGA.modalview('/projects/'+project.slug);
     this.props.setActiveProject(project);
   }
 
