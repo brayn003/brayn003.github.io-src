@@ -1,63 +1,112 @@
 .view-projects{
-  width: calc(100% - 500px);
-  height: 100vh;
-  padding-left: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 
-  .slider{
-    visibility: inherit !important;
+  .project-container{
+    width: calc(100% - 300px);
+    height: 100vh;
+    padding-left: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .project-tile-container {
+    position: relative;
+    width: 750px;
+    height: 600px;
+
+    .project-tile{
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 20px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px 0px rgba(64,64,64,0.6);
+      
+      .project-tile-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-size: 32px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity 300ms;
+      }
+
+      &:hover{
+        .project-tile-overlay {
+          transition: opacity 300ms;
+          opacity: 1;
+        }
+      }
+    }
+
+
+  }
+
+  // .slider{
+  //   visibility: inherit !important;
     
-    .slide-title{
-      font-weight: 600;
-      font-size: 28px;
-    }
+  //   .slide-title{
+  //     font-weight: 600;
+  //     font-size: 28px;
+  //   }
 
-    p{
-      color: #FFFFFF;
-      font-family: 'Dosis';
-      font-size: 22px;
-    }
-  }
+  //   p{
+  //     color: #FFFFFF;
+  //     font-family: 'Dosis';
+  //     font-size: 22px;
+  //   }
+  // }
 
 
-  .slide-pagination{
-    color: #FFFFFF;
+  // .slide-pagination{
+  //   color: #FFFFFF;
 
-  }
+  // }
 
-  .slider-clear-btn{
-    background: transparent;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
+  // .slider-clear-btn{
+  //   background: transparent;
+  //   border: none;
+  //   padding: 5px;
+  //   cursor: pointer;
 
-    &:focus{
-      outline: none;
-    }
+  //   &:focus{
+  //     outline: none;
+  //   }
 
-    &::-moz-focus-inner {
-      border: 0;
-    }
+  //   &::-moz-focus-inner {
+  //     border: 0;
+  //   }
 
-    .typcn {
-      color: #FFFFFF;
-      font-size: 22px;
-    }
-  }
+  //   .typcn {
+  //     color: #FFFFFF;
+  //     font-size: 22px;
+  //   }
+  // }
 
-  .project-slider-container{
-    height: 80%;
-    width: 80%;
-  }
+  // .project-slider-container{
+  //   height: 80%;
+  //   width: 80%;
+  // }
 
-  .img-container{
-    margin-left: auto;
-    margin-right: auto;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+  // .img-container{
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   background-size: contain;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  // }
 
 }

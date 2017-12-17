@@ -4,6 +4,7 @@ import Sidebar from '../Sidebar';
 import MainView from '../MainView';
 import Background from '../Background';
 import CursorDisplay from '../CursorDisplay';
+import ProjectModal from '../ProjectModal';
 
 export default class Layout extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class Layout extends Component {
           <div className="bottom-right xs-hidden">
             <CursorDisplay />
           </div>
+          <ProjectModal />
         </div>
       </div>
     );

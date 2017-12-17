@@ -7,6 +7,8 @@ export default function MenuReducer(state = { items, active }, action) {
     case 'MENU_ACTIVE_SET':
       menu.active = action.payload;
       break;
+    default:
+      menu.active = state.active;
   }
   return menu;
 }

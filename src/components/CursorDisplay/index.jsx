@@ -24,7 +24,6 @@ class CursorDisplay extends Component{
   getArrows(activeMenu) {
     switch(activeMenu) {
       case 'projects':
-        return ['up', 'left', 'down', 'right'];
       case 'home':
       case 'about':
       case 'contact':

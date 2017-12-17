@@ -22,7 +22,7 @@ class Sidebar extends Component {
       home: '/',
       about: '/about',
       projects: '/projects',
-      contact: 'contact'
+      contact: '/contact'
     }
   }
 
@@ -97,7 +97,7 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div className="sidebar">
+      <div style={{ display: this.props.project.active == null ? 'block' : 'none' }} className="sidebar">
         <ul style={{ top: this.state.menuTop }}>
           {this.renderMenuItems()}
         </ul>
@@ -108,7 +108,8 @@ class Sidebar extends Component {
 
 function mapStateToProps(state) {
   return {
-    menu: state.menu
+    menu: state.menu,
+    project: state.project
   }
 }
 
