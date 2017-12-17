@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 import Layout from './components/Layout';
 import allReducers from './reducers';
@@ -27,8 +27,8 @@ ReactGA.initialize('UA-110790543-1', { debug: true });
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Layout />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
   , document.getElementById('app'));
